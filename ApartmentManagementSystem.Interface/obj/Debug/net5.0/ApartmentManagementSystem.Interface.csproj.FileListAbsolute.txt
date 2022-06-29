@@ -1,0 +1,15 @@
+C:\Projects\ApartmentManagementSystem\ApartmentManagementSystem.Interface\bin\Debug\net5.0\ApartmentManagementSystem.Interface.deps.json
+C:\Projects\ApartmentManagementSystem\ApartmentManagementSystem.Interface\bin\Debug\net5.0\ApartmentManagementSystem.Interface.dll
+C:\Projects\ApartmentManagementSystem\ApartmentManagementSystem.Interface\bin\Debug\net5.0\ApartmentManagementSystem.Interface.pdb
+C:\Projects\ApartmentManagementSystem\ApartmentManagementSystem.Interface\obj\Debug\net5.0\ApartmentManagementSystem.Interface.csproj.AssemblyReference.cache
+C:\Projects\ApartmentManagementSystem\ApartmentManagementSystem.Interface\obj\Debug\net5.0\ApartmentManagementSystem.Interface.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\ApartmentManagementSystem\ApartmentManagementSystem.Interface\obj\Debug\net5.0\ApartmentManagementSystem.Interface.AssemblyInfoInputs.cache
+C:\Projects\ApartmentManagementSystem\ApartmentManagementSystem.Interface\obj\Debug\net5.0\ApartmentManagementSystem.Interface.AssemblyInfo.cs
+C:\Projects\ApartmentManagementSystem\ApartmentManagementSystem.Interface\obj\Debug\net5.0\ApartmentManagementSystem.Interface.csproj.CoreCompileInputs.cache
+C:\Projects\ApartmentManagementSystem\ApartmentManagementSystem.Interface\obj\Debug\net5.0\ApartmentManagementSystem.Interface.dll
+C:\Projects\ApartmentManagementSystem\ApartmentManagementSystem.Interface\obj\Debug\net5.0\refint\ApartmentManagementSystem.Interface.dll
+C:\Projects\ApartmentManagementSystem\ApartmentManagementSystem.Interface\obj\Debug\net5.0\ApartmentManagementSystem.Interface.pdb
+C:\Projects\ApartmentManagementSystem\ApartmentManagementSystem.Interface\obj\Debug\net5.0\ref\ApartmentManagementSystem.Interface.dll
+C:\Projects\ApartmentManagementSystem\ApartmentManagementSystem.Interface\bin\Debug\net5.0\ApartmentManagementSystem.Entity.dll
+C:\Projects\ApartmentManagementSystem\ApartmentManagementSystem.Interface\bin\Debug\net5.0\ApartmentManagementSystem.Entity.pdb
+C:\Projects\ApartmentManagementSystem\ApartmentManagementSystem.Interface\obj\Debug\net5.0\ApartmentManagementSystem.Interface.csproj.CopyComplete

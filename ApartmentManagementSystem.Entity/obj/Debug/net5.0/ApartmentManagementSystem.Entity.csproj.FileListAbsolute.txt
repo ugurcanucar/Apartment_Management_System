@@ -1,0 +1,15 @@
+C:\Projects\ApartmentManagementSystem\ApartmentManagementSystem.Entity\bin\Debug\net5.0\ApartmentManagementSystem.Entity.deps.json
+C:\Projects\ApartmentManagementSystem\ApartmentManagementSystem.Entity\bin\Debug\net5.0\ApartmentManagementSystem.Entity.dll
+C:\Projects\ApartmentManagementSystem\ApartmentManagementSystem.Entity\bin\Debug\net5.0\ApartmentManagementSystem.Entity.pdb
+C:\Projects\ApartmentManagementSystem\ApartmentManagementSystem.Entity\obj\Debug\net5.0\ApartmentManagementSystem.Entity.csproj.AssemblyReference.cache
+C:\Projects\ApartmentManagementSystem\ApartmentManagementSystem.Entity\obj\Debug\net5.0\ApartmentManagementSystem.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\ApartmentManagementSystem\ApartmentManagementSystem.Entity\obj\Debug\net5.0\ApartmentManagementSystem.Entity.AssemblyInfoInputs.cache
+C:\Projects\ApartmentManagementSystem\ApartmentManagementSystem.Entity\obj\Debug\net5.0\ApartmentManagementSystem.Entity.AssemblyInfo.cs
+C:\Projects\ApartmentManagementSystem\ApartmentManagementSystem.Entity\obj\Debug\net5.0\ApartmentManagementSystem.Entity.csproj.CoreCompileInputs.cache
+C:\Projects\ApartmentManagementSystem\ApartmentManagementSystem.Entity\obj\Debug\net5.0\ApartmentManagementSystem.Entity.dll
+C:\Projects\ApartmentManagementSystem\ApartmentManagementSystem.Entity\obj\Debug\net5.0\refint\ApartmentManagementSystem.Entity.dll
+C:\Projects\ApartmentManagementSystem\ApartmentManagementSystem.Entity\obj\Debug\net5.0\ApartmentManagementSystem.Entity.pdb
+C:\Projects\ApartmentManagementSystem\ApartmentManagementSystem.Entity\obj\Debug\net5.0\ref\ApartmentManagementSystem.Entity.dll
+C:\Projects\ApartmentManagementSystem\ApartmentManagementSystem.Entity\bin\Debug\net5.0\ApartmentManagementSystem.Entity.runtimeconfig.json
+C:\Projects\ApartmentManagementSystem\ApartmentManagementSystem.Entity\bin\Debug\net5.0\ApartmentManagementSystem.Entity.runtimeconfig.dev.json
+C:\Projects\ApartmentManagementSystem\ApartmentManagementSystem.Entity\obj\Debug\net5.0\ApartmentManagementSystem.Entity.genruntimeconfig.cache
