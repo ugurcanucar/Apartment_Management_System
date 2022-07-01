@@ -1,0 +1,30 @@
+@import "styles/colors.scss";
+
+.auth-general {
+  @apply bg-[#363740] w-full min-h-[100vh] h-full flex justify-center items-center;
+
+  .auth-wrapper {
+    @apply bg-white py-12 px-10 flex flex-col items-center min-w-[30vw] rounded-md shadow shadow-white;
+    .auth-branding {
+      @apply flex flex-col justify-center items-center gap-3 mb-6;
+      .brand-logo {
+        @apply w-32;
+      }
+      .branding-text {
+        @apply text-gray-400  font-medium text-base;
+      }
+    }
+    .auth-form-general {
+      @apply flex flex-col gap-3 justify-center items-center;
+      .auth-title {
+        @apply font-semibold text-xl text-[#252733] tracking-wide;
+      }
+      .auth-subtitle {
+        @apply text-sm text-gray-400 tracking-wide;
+      }
+      .auth-form {
+        @apply flex flex-col items-center w-full gap-4;
+      }
+    }
+  }
+}

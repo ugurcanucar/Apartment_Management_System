@@ -1,0 +1,6 @@
+@import "styles/colors.scss";
+
+.special-button {
+  @apply mt-5  py-2 rounded-lg w-full text-white shadow-md;
+  background-color: $primary-color;
+}

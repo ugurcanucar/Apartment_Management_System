@@ -1,0 +1,18 @@
+.table-general {
+  @apply w-full border border-gray-300 shadow-sm;
+  .table-header {
+    @apply bg-[#262d47] text-white border-t-0;
+    th:not(:last-child) {
+      @apply border-r border-r-gray-500;
+    }
+    th {
+      @apply p-2;
+    }
+  }
+  td {
+    @apply px-3 py-2 border-b border-b-gray-300;
+    &:not(:last-child) {
+      @apply border-r border-r-gray-300;
+    }
+  }
+}
