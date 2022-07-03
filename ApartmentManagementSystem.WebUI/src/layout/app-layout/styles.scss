@@ -5,7 +5,7 @@
     @apply h-screen  pt-5 pb-10 flex transition-all duration-700 flex-col bg-[#262d47] items-center;
 
     .sider-menu-general {
-      @apply text-[#95a6b6] w-full;
+      @apply text-[#95a6b6] w-full whitespace-nowrap;
     }
   }
 

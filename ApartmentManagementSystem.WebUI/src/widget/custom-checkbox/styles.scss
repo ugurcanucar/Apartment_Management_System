@@ -4,8 +4,4 @@
 }
 .custom-checkbox {
   @apply border  outline-none py-[6px] w-full transition-all pl-8 rounded-sm border-gray-200;
-  &:focus {
-    @apply shadow-md;
-    border-color: $primary-color;
-  }
 }

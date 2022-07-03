@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./styles.scss";
 const CustomSelect = ({
   label = "",
@@ -8,13 +8,22 @@ const CustomSelect = ({
   value,
   propertyName,
   disabled = false,
+  defaultValue,
   dataSet = [],
   dataLabelProperty = "name",
   dataValueProperty = "id",
 }) => {
+  const [selectValue, setSelectValue] = useState(0);
+
   const changeHandler = (val) => {
-    onChange({ ...value, [propertyName]: val });
+    onChange({ ...value, [propertyName]: parseInt(val) });
+    setSelectValue(val);
   };
+  useEffect(() => {
+    if (defaultValue != undefined) {
+      setSelectValue(defaultValue);
+    }
+  }, [defaultValue]);
 
   return (
     <div className="w-full">
@@ -24,6 +33,8 @@ const CustomSelect = ({
         <select
           className="custom-select"
           disabled={disabled}
+          // value={defaultValue ? defaultValue : value[propertyName]}
+          value={selectValue}
           placeholder={placeholder}
           onChange={(e) => changeHandler(e.target.value)}
         >

@@ -4,17 +4,24 @@ const CustomTableButton = ({
   onClick,
   isEditButton = true,
   label = isEditButton ? "Edit" : "Delete",
+  icon,
 }) => {
   return (
-    <button
-      className={`${
-        isEditButton ? "edit-button" : "delete-button"
-      } table-button`}
-      onClick={onClick}
-    >
-      <i className={`fa ${isEditButton ? " fa-pen " : "fa-trash"} mr-2 "`} />{" "}
-      {label}
-    </button>
+    <div className="relative">
+      <button
+        className={`${
+          isEditButton ? "edit-button" : "delete-button"
+        } table-button`}
+        onClick={onClick}
+      >
+        <i
+          className={`fa  ${
+            icon ? icon : isEditButton ? " fa-pen " : "fa-trash"
+          }   mr-2 "`}
+        />{" "}
+        {label}
+      </button>
+    </div>
   );
 };
 

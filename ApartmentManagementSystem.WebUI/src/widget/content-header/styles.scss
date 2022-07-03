@@ -1,0 +1,12 @@
+.content-header-wrapper {
+  @apply h-1/6 w-full grid grid-cols-3 mt-5 items-center mb-20;
+  .content-header {
+    @apply col-start-2 flex flex-col items-center justify-center gap-5;
+    .content-icon {
+      @apply text-6xl text-gray-600;
+    }
+    .content-title {
+      @apply font-semibold text-xl text-gray-600;
+    }
+  }
+}

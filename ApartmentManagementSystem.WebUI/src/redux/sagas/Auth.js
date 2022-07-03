@@ -14,6 +14,10 @@ export function* signInWithFBEmail() {
       const user = yield call(ApiService.signIn, email, password);
       if (user.data) {
         localStorage.setItem(AUTH_TOKEN, user.data.accessToken);
+        localStorage.setItem(
+          "userInformation",
+          JSON.stringify(user.data.dtoLoginUser)
+        );
         yield put(authenticated(user.data.accessToken));
       } else {
         yield put(showAuthMessage(user.message));

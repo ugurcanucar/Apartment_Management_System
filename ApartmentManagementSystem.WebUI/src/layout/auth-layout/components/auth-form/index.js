@@ -44,7 +44,7 @@ const AuthForm = (props) => {
         onChange={setAuthObj}
       />
       <AuthFormInput
-        isPassword={true}
+        type="password"
         label="Password"
         icon="fa fa-lock"
         placeholder="Please enter your password"

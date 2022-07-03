@@ -28,10 +28,7 @@ apiService.signIn = async (email, password) => {
 };
 
 apiService.signOut = () => {
-  localStorage.removeItem("auth_token");
-};
-const config = {
-  headers: { "content-type": "multipart/form-data" },
+  localStorage.clear();
 };
 apiService.get = (url) => apiGateway.get(url);
 apiService.post = (url, data) => apiGateway.post(url, data);

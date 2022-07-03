@@ -11,6 +11,16 @@ const apartmentService = {
         console.log(err);
       });
   },
+  removeApartment: async (id) => {
+    return api
+      .delete(`Apartment/Delete?id=${id}`)
+      .then((d) => {
+        return d.data;
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  },
   getApartments: async () => {
     return api
       .get(`Apartment/GetApartments`)
@@ -24,6 +34,16 @@ const apartmentService = {
   addApartment: async (obj) => {
     return api
       .post(`Apartment/Add`, obj)
+      .then((d) => {
+        return d.data;
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  },
+  updateApartment: async (obj) => {
+    return api
+      .put(`Apartment/Update`, obj)
       .then((d) => {
         return d.data;
       })

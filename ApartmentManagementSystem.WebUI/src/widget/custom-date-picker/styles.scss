@@ -1,0 +1,11 @@
+@import "styles/colors.scss";
+.custom-input-label {
+  @apply text-sm text-gray-400;
+}
+.custom-date-input {
+  @apply border  outline-none py-[6px] w-max transition-all rounded-sm  px-2 border-gray-200;
+  &:focus {
+    @apply shadow-md;
+    border-color: $primary-color;
+  }
+}

@@ -1,0 +1,17 @@
+.modal {
+  @apply fixed z-10 left-0 top-0 w-full h-full overflow-auto  transition-all duration-300;
+  background-color: rgba(0, 0, 0, 0.4);
+  .modal-content {
+    @apply p-5 border border-gray-400  w-max relative pt-14;
+    background-color: #fefefe;
+    margin: 15% auto;
+
+    .close {
+      @apply text-gray-400 top-3 right-5 text-3xl font-bold absolute transition-colors duration-300;
+      &:hover,
+      &:focus {
+        @apply text-black cursor-pointer;
+      }
+    }
+  }
+}
