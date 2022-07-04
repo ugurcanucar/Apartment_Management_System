@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ApartmentManagementSystem.Entity.Dto
 {
-    public class DtoLogin:DtoBase
+    public class DtoLogin
     {
         [Required]
         public string Email { get; set; }

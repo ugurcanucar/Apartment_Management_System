@@ -47,16 +47,16 @@ namespace ApartmentManagementSystem.WebApi
 
                     cfg.TokenValidationParameters = new TokenValidationParameters
                     {
-                        ValidateIssuer=true,
-                        ValidateAudience=true,
-                        ValidIssuer=Configuration["Tokens:Issuer"],
-                        ValidAudience=Configuration["Tokens:Issuer"],
-                        IssuerSigningKey=new SymmetricSecurityKey
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidIssuer = Configuration["Tokens:Issuer"],
+                        ValidAudience = Configuration["Tokens:Issuer"],
+                        IssuerSigningKey = new SymmetricSecurityKey
                         (
                             Encoding.UTF8.GetBytes(Configuration["Tokens:Key"])
                         ),
-                        RequireSignedTokens=true,
-                        RequireExpirationTime=true,
+                        RequireSignedTokens = true,
+                        RequireExpirationTime = true,
 
                     };
                 });
@@ -92,13 +92,16 @@ namespace ApartmentManagementSystem.WebApi
             #endregion
 
             #region UnitOfWork
-            services.AddScoped<IUnitOfWork,UnitOfWork>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             #endregion
 
 
+
             services.AddControllers();
+
             services.AddSwaggerGen(opt =>
             {
+                opt.MapType<DateTime>(() => new OpenApiSchema { Type = "string", Format = "date" });
                 opt.SwaggerDoc("v1", new OpenApiInfo { Title = "ApartmentManagementSystem.WebApi", Version = "v1" });
                 opt.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
@@ -139,6 +142,12 @@ namespace ApartmentManagementSystem.WebApi
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors(x => x
+              .AllowAnyMethod()
+              .AllowAnyHeader()
+              .SetIsOriginAllowed(origin => true) // allow any origin
+              .AllowCredentials()); // allow credentials
+
 
             app.UseAuthorization();
 

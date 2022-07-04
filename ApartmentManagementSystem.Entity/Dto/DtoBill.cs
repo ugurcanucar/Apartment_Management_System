@@ -12,6 +12,8 @@ namespace ApartmentManagementSystem.Entity.Dto
         public int BillTypeId { get; set; }
         public string Card { get; set; }
         public int Value { get; set; }
+        public DateTime Date { get; set; }
+
         public int? PaidValue { get; set; }
         public DateTime? PaidDate { get; set; }
          

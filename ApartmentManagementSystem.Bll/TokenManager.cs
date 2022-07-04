@@ -24,18 +24,12 @@ namespace ApartmentManagementSystem.Bll
         {
             var claims = new[]
             {
-                new Claim(JwtRegisteredClaimNames.Jti,user.Id.ToString()),
-                new Claim(JwtRegisteredClaimNames.Jti,user.AccountTypeId.ToString())
-
+                new Claim(JwtRegisteredClaimNames.Jti,user.Id.ToString()), 
+                new Claim(ClaimTypes.Role,user.AccountTypeId.ToString()),    
             };
 
             var claimsIdentity = new ClaimsIdentity(claims, "Token");
-
-            var claimsRoleList = new List<Claim>
-            {
-                new Claim("Role","Admin")
-            };
-
+             
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Tokens:Key"]));
 
             var cred = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);

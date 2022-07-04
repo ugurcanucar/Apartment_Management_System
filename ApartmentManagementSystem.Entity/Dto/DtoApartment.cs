@@ -8,7 +8,7 @@ namespace ApartmentManagementSystem.Entity.Dto
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public int UserId { get; set; }
+        public int? UserId { get; set; }
         public bool IsEmpty { get; set; }
         public int ApartmentTypeId { get; set; }
         public int BlockId { get; set; }

@@ -90,7 +90,10 @@ namespace ApartmentManagementSystem.Bll
         {
             try
             {
-                repository.Delete(id);
+                var user = repository.Find(id);
+                user.IsDeleted = true; 
+                repository.Update(user);
+
                 if (saveChanges)
                     Save();
                 return new Response<bool>
@@ -107,6 +110,34 @@ namespace ApartmentManagementSystem.Bll
                     StatusCode = StatusCodes.Status500InternalServerError,
                     Message = $"Error {ex.Message}",
                     Data = false
+                };
+            }
+        }
+        public IResponse<TDto> Update(TDto model, bool saveChanges = true)
+        {
+            try
+            {
+                var mappedModel = ObjectMapper.Mapper.Map<T>(model);
+                var result = repository.Update(mappedModel);
+
+                if (saveChanges)
+                    Save();
+
+                return new Response<TDto>
+                {
+                    StatusCode = StatusCodes.Status200OK,
+                    Message = "Success",
+                    Data = ObjectMapper.Mapper.Map<T, TDto>(result)
+                };
+            }
+            catch (Exception ex)
+            {
+
+                return new Response<TDto>
+                {
+                    StatusCode = StatusCodes.Status500InternalServerError,
+                    Message = $"Error {ex.Message}",
+                    Data = null
                 };
             }
         }
@@ -137,6 +168,7 @@ namespace ApartmentManagementSystem.Bll
             }
         }
 
+
         public IResponse<TDto> Find(int id)
         {
             try
@@ -159,13 +191,26 @@ namespace ApartmentManagementSystem.Bll
                     Data = null
                 };
             }
+        
         }
+        public TDto FindModel(int id)
+        {
+            try
+            {
+                var entity = ObjectMapper.Mapper.Map<T, TDto>(repository.Find(id));
+                return entity;
+            }
+            catch
+            {
 
+                return null;
+            }
+        }
         public IResponse<List<TDto>> GetAll()
         {
             try
             {
-                var list =repository.GetAll();
+                var list =repository.GetAll(x=>x.IsDeleted==false);
                 var listDto = list.Select(x=>ObjectMapper.Mapper.Map<TDto>(x)).ToList();
 
                 return new Response<List<TDto>>
@@ -190,7 +235,7 @@ namespace ApartmentManagementSystem.Bll
         public IResponse<List<TDto>> GetAll(Expression<Func<T, bool>> expression)
         {
             try
-            {
+            {  
                 var list = repository.GetAll(expression);
                 var listDto = list.Select(x => ObjectMapper.Mapper.Map<TDto>(x)).ToList();
 
@@ -245,34 +290,6 @@ namespace ApartmentManagementSystem.Bll
         
         }
 
-        public IResponse<TDto> Update(TDto model, bool saveChanges = true)
-        {
-            try
-            {
-                var mappedModel = ObjectMapper.Mapper.Map<T>(model);
-                var result = repository.Update(mappedModel);
-
-                if (saveChanges)
-                    Save();
-
-                return new Response<TDto>
-                {
-                    StatusCode = StatusCodes.Status200OK,
-                    Message = "Success",
-                    Data = ObjectMapper.Mapper.Map<T, TDto>(result)
-                };
-            }
-            catch (Exception ex)
-            {
-
-                return new Response<TDto>
-                {
-                    StatusCode = StatusCodes.Status500InternalServerError,
-                    Message = $"Error {ex.Message}",
-                    Data = null
-                };
-            }
-        }
-
+        
      }
 }

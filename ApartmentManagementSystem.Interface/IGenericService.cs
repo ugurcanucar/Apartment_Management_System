@@ -12,9 +12,9 @@ namespace ApartmentManagementSystem.Interface
         IResponse<List<TDto>> GetAll();
         IResponse<List<TDto>> GetAll(Expression<Func<T,bool>> expression);
         IResponse<TDto> Find(int id);
+        TDto FindModel(int id);    
         IResponse<TDto> Add(TDto model, bool saveChanges = true);
         Task<IResponse<TDto>> AddAsync(TDto model, bool saveChanges = true);
-
         IResponse<TDto> Update(TDto model, bool saveChanges = true);
          IResponse<bool> Delete(int id,bool saveChanges=true);
         IResponse<bool> Delete(TDto model,bool saveChanges=true);

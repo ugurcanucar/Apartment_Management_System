@@ -29,6 +29,6 @@ namespace ApartmentManagementSystem.Entity.Models
         public virtual ICollection<Apartment> Apartments { get; set; }
         public virtual ICollection<Bill> Bills { get; set; }
         public virtual ICollection<Message> MessageReceivers { get; set; }
-        public virtual ICollection<Message> MessageUsers { get; set; }
+        public virtual ICollection<Message> MessageUsers { get; set; } 
     }
 }

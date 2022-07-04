@@ -11,6 +11,6 @@ namespace ApartmentManagementSystem.Dal.Abstract
     {
         IQueryable<User> GetTotalUsers();
 
-        User Login(User login);
+        User Login(User login); 
     }
 }

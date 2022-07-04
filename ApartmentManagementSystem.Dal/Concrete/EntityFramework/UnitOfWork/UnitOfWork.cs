@@ -61,7 +61,7 @@ namespace ApartmentManagementSystem.Dal.Concrete.EntityFramework.UnitOfWork
         public IGenericRepository<T> GetRepository<T>() where T : EntityBase
         {
             return new GenericRepository<T>(context);
-
+            
         }
 
         public bool RollBackTransaction()

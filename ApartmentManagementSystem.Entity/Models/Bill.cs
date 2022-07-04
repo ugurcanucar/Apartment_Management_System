@@ -13,6 +13,7 @@ namespace ApartmentManagementSystem.Entity.Models
         public int Value { get; set; }
         public int? PaidValue { get; set; }
         public DateTime? PaidDate { get; set; }
+        public DateTime Date { get; set; }
 
         public virtual BillType BillType { get; set; }
         public virtual User User { get; set; }

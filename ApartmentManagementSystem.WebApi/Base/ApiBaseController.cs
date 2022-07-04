@@ -20,94 +20,42 @@ namespace ApartmentManagementSystem.WebApi.Base
             this.service = service;
         }
 
-        [HttpGet]
-        public IResponse<List<TDto>> GetAll()
-        {
-            try
-            {
-                return service.GetAll();
-            }
-            catch (System.Exception ex)
-            {
-                return new Response<List<TDto>>
-                {
-                    StatusCode = StatusCodes.Status500InternalServerError,
-                    Message = ex.Message,
-                    Data = null
-                };
-            }
-        }
-
-        [HttpGet]
-        public IResponse<TDto> Find(int id)
-        {
-            try
-            {
-                return service.Find(id);
-            }
-            catch (System.Exception ex)
-            {
-                return new Response<TDto>
-                {
-                    StatusCode=StatusCodes.Status500InternalServerError,
-                    Message=ex.Message,
-                    Data=null
-                };
-            }
-        }
-
-        [HttpPost]
-        public IResponse<TDto> Add(TDto model)
-        {
-            try
-            {
-                return service.Add(model);
-            }
-            catch (System.Exception ex)
-            {
-                return new Response<TDto>
-                {
-                    StatusCode = StatusCodes.Status500InternalServerError,
-                    Message = ex.Message,
-                    Data = null
-                };
-            }
-        }
-        [HttpPut]
-        public IResponse<TDto> Update(TDto model)
-        {
-            try
-            {
-                return service.Update(model);
-            }
-            catch (System.Exception ex)
-            {
-                return new Response<TDto>
-                {
-                    StatusCode = StatusCodes.Status500InternalServerError,
-                    Message = ex.Message,
-                    Data = null
-                };
-            }
-        }
+           
+        //[HttpPut]
+        //public IResponse<TDto> Update(TDto model)
+        //{
+        //    try
+        //    {
+        //        return service.Update(model);
+        //    }
+        //    catch (System.Exception ex)
+        //    {
+        //        return new Response<TDto>
+        //        {
+        //            StatusCode = StatusCodes.Status500InternalServerError,
+        //            Message = ex.Message,
+        //            Data = null
+        //        };
+        //    }
+        //}
         
-        [HttpDelete]
-        public IResponse<bool> Delete(int id)
-        {
-            try
-            {
-                return service.Delete(id);
-            }
-            catch (System.Exception ex)
-            {
-                return new Response<bool>
-                {
-                    StatusCode = StatusCodes.Status500InternalServerError,
-                    Message = ex.Message,
-                    Data = false
-                };
-            }
-        }
+        //[HttpDelete]
+        //public IResponse<bool> Delete(int id)
+        //{
+        //    try
+        //    {
+        //        return service.Delete(id);
+        //    }
+        //    catch (System.Exception ex)
+        //    {
+        //        return new Response<bool>
+        //        {
+        //            StatusCode = StatusCodes.Status500InternalServerError,
+        //            Message = ex.Message,
+        //            Data = false
+        //        };
+        //    }
+        //}
         
     }
 }

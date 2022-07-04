@@ -8,5 +8,7 @@ namespace ApartmentManagementSystem.Entity.Base
 {
     public class DtoBase:IDtoBase
     {
+        public bool IsDeleted { get; set ; }
+
     }
 }

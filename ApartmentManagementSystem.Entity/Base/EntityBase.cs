@@ -8,6 +8,7 @@ namespace ApartmentManagementSystem.Entity.Base
 {
     public class EntityBase : IEntityBase
     {
+        public bool IsDeleted { get; set; }
 
     }
 }
